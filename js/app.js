@@ -1,8 +1,8 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/controls/GLTFLoader.js';
-import { ARButton } from './jsm/webxr/ARButton.js'
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
+import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js';
+import { ARButton } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/ARButton.js';
+import { RGBELoader } from 'https://unpkg.com/three@0.141.0/examples/jsm/loaders/RGBELoader.js';
+import { XRControllerModelFactory } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/XRControllerModelFactory.js';
 import { InteractionManager } from './InteractionManager.js';
 import { setupUIControls } from './uiControls.js';
 import { showConfirmationModal } from './modalManager.js';
@@ -27,7 +27,11 @@ class App {
     this.loadingManager = new THREE.LoadingManager(() => {});
     this.loadingManager.onProgress = (url, loaded, total) => {};
     
-    this.gltfLoader = new GLTFLoader(this.loadingManager);
+    // Load GLTFLoader.
+    import('https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js').then((module) => { 
+      this.gltfLoader = new module.GLTFLoader(this.loadingManager);
+    });
+
     this.rgbeLoader = new RGBELoader(this.loadingManager);
 
     this.init();
