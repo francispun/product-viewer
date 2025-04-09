@@ -1,6 +1,6 @@
 // uiControls.js
 
-import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+import * as THREE from 'three';
 import { ARButton } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/ARButton.js';
 import { showConfirmationModal } from './modalManager.js';
 
