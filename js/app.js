@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/controls/GLTFLoader.js';
 import { ARButton } from './jsm/webxr/ARButton.js'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import { InteractionManager } from './InteractionManager.js';
@@ -26,11 +27,7 @@ class App {
     this.loadingManager = new THREE.LoadingManager(() => {});
     this.loadingManager.onProgress = (url, loaded, total) => {};
     
-    // Load GLTFLoader.
-    import('three/addons/loaders/GLTFLoader.js').then((module) => { 
-      this.gltfLoader = new module.GLTFLoader(this.loadingManager);
-    });
-
+    this.gltfLoader = new GLTFLoader(this.loadingManager);
     this.rgbeLoader = new RGBELoader(this.loadingManager);
 
     this.init();
