@@ -27,7 +27,7 @@ class App {
     this.loadingManager.onProgress = (url, loaded, total) => {};
     
     // Load GLTFLoader.
-    import('/node_modules/three/examples/jsm/loaders/GLTFLoader.js').then((module) => { 
+    import('three/addons/loaders/GLTFLoader.js').then((module) => { 
       this.gltfLoader = new module.GLTFLoader(this.loadingManager);
     });
 
