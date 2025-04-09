@@ -1,7 +1,7 @@
 // uiControls.js
 
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { ARButton } from '/node_modules/three/examples/jsm/webxr/ARButton.js';
+import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+import { ARButton } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/ARButton.js';
 import { showConfirmationModal } from './modalManager.js';
 
 function shouldUseCompactUI() {

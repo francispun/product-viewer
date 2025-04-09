@@ -1,10 +1,10 @@
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
-import { ARButton } from '/node_modules/three/examples/jsm/webxr/ARButton.js';
-import { RGBELoader } from '/node_modules/three/examples/jsm/loaders/RGBELoader.js';
-import { XRControllerModelFactory } from '/node_modules/three/examples/jsm/webxr/XRControllerModelFactory.js';
+import * as THREE from 'https://unpkg.com/three@0.141.0/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js';
+import { ARButton } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/ARButton.js';
+import { RGBELoader } from 'https://unpkg.com/three@0.141.0/examples/jsm/loaders/RGBELoader.js';
+import { XRControllerModelFactory } from 'https://unpkg.com/three@0.141.0/examples/jsm/webxr/XRControllerModelFactory.js';
 import { InteractionManager } from './InteractionManager.js';
-import { setupUIControls, updateToggleUI } from './uiControls.js';
+import { setupUIControls } from './uiControls.js';
 import { showConfirmationModal } from './modalManager.js';
 
 // Removed socket initialization and host-related variables.
